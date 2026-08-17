@@ -1,14 +1,21 @@
 [project]
-name = "py-unified-calendar"
+name = "py-unified-calendar-google"
 version = "0.1.0"
-description = "Generic calendar library for simple handling of different calendar services"
+description = "Specification of py-unified-caledar for google services"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "geopy>=2.5.0",
+    "google-api-python-client>=2.198.0",
+    "google-auth-httplib2>=0.4.1",
+    "google-auth-oauthlib>=1.4.0",
+    "py-unified-calendar",
 ]
 
 [dependency-groups]
 dev = [
     "pytest>=9.1.1",
 ]
+
+[tool.uv.sources]
+py-unified-calendar = { git = "https://github.com/sergentbne/py-unified-calendar.git" }
